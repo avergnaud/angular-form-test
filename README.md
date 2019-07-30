@@ -1,5 +1,11 @@
 # AngularFormTest
 
+https://avergnaud.github.io/angular-form-test
+
+`ng build --prod --base-href "https://avergnaud.github.io/angular-form-test/"`
+
+`sudo ngh --dir dist/angular-form-test`
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.6.
 
 ## Development server
