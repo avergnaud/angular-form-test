@@ -1,0 +1,45 @@
+<div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h3>V3 with validation</h3>
+            <form (ngSubmit)="onAdd()" #f="ngForm">
+              <div class="form-group">
+                <label for="email-id">Mail</label>
+                <input
+                  type="text"
+                  id="email-id"
+                  class="form-control"
+                  ngModel
+                  name="email"
+                  required
+                  email
+                  #emailInput="ngModel"
+                />
+                <!-- The template variable (#emailInput) has the value "ngModel" (always ngModel). 
+                This gives you a reference to the Angular NgModel directive associated with 
+                this control that you can use in the template to check for control states such as valid and dirty.
+                -->
+                <span class="help-block" *ngIf="!emailInput.valid && emailInput.touched">Please enter a valid email address</span>
+              </div>
+              <div class="form-group">
+                <label for="name-id">Name</label>
+                <input
+                  type="text"
+                  id="name-id"
+                  class="form-control"
+                  ngModel
+                  name="name"
+                />
+              </div>
+              <button
+                [disabled]="!f.valid" 
+                class="btn btn-success"
+                type="submit"
+                >
+                Add
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      
